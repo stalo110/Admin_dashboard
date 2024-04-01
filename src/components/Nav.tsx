@@ -103,7 +103,7 @@ export const Search = styled.div`
   margin-top: 20px;
 
   @media (max-width: 768px) {
-    width: 65%;
+    width: 25%;
   }
 
 `;
@@ -117,6 +117,6 @@ export const Notification = styled.div`
   padding-right: 5px;
 
   @media (max-width: 768px) {
-    width: 70%;
+    width: 25%;
   }
 `;

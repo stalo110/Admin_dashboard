@@ -90,7 +90,7 @@ export const Cart = styled.div`
   border: 1px solid lightgrey;
 
   @media (max-width: 768px) {
-    width: 30%;
+    width: 27%;
     margin-bottom: 20px;
   }
 `;
@@ -135,13 +135,13 @@ export const GraphImg = styled.div`
   width: 100%;
 
   @media (max-width: 768px) {
-    width: 50%;
+    width: 30%;
   }
 `;
 
 export const CardImg = styled.div`
   @media (max-width: 768px) {
-    width: 40%;
+    width: 30%;
   }
 `;
 
