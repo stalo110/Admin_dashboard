@@ -77,7 +77,7 @@ export const Statistics = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     margin-bottom: 20px;
-    margin-left:4%;
+    margin-left:2%;
     margin-top:20px;
   }
 `;
