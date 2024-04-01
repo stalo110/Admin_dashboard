@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink, useNavigate } from "react-router-dom";
-import { closeModal, selectModalState } from "../store/reducers/modalSlice";
+import { NavLink } from "react-router-dom";
+import { selectModalState } from "../store/reducers/modalSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { toggle } from "../store/reducers/modalSlice";
 import Yello from "../assets/yellowCircle.svg";
@@ -39,13 +39,10 @@ const sidebarNav: Name[] = [
 ];
 
 const SideNav = () => {
-  const navigate = useNavigate();
+
   const dispatch = useDispatch();
   const { isOpen } = useSelector(selectModalState);
 
-  const handleClose = () => {
-    dispatch(closeModal());
-  };
   return (
     <>
       <SideNav1 $isOpen={isOpen}>

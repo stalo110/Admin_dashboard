@@ -1,6 +1,5 @@
 import Search1 from "../assets/search icon.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import Girl from "../assets/girl1.svg";
 import styled from "styled-components";
 import Notification1 from "../assets/Notification.svg";
@@ -8,15 +7,12 @@ import Arror from "../assets/arror.svg";
 import { FaStream, FaTimes } from "react-icons/fa";
 import { toggle } from "../store/reducers/modalSlice";
 import { Overview } from "../styles/styles.ts";
-import { closeModal, selectModalState } from "../store/reducers/modalSlice";
+import { selectModalState } from "../store/reducers/modalSlice";
 
 const Nav = () => {
   const dispatch = useDispatch();
   const { isOpen } = useSelector(selectModalState);
-  const navigate = useNavigate();
-  const handleClose = () => {
-    dispatch(closeModal());
-  };
+ 
 
   return (
     <TopDiv>
@@ -108,7 +104,7 @@ export const Search = styled.div`
   @media (max-width: 768px) {
     width: 65%;
   }
-  
+
 `;
 
 export const Notification = styled.div`
