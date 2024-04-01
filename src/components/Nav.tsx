@@ -16,9 +16,7 @@ const Nav = () => {
 
   return (
     <TopDiv>
-      <StyledAngleDown onClick={() => dispatch(toggle())}>
-        {isOpen ? <FaTimes /> : <FaStream />}
-      </StyledAngleDown>
+      
       <Overview>
         <h1 style={{ color: "black", fontSize: "32px", fontWeight: "700" }}>
           Overview
@@ -42,6 +40,9 @@ const Nav = () => {
         </p>
         <img src={Arror} alt="" style={{ width: "5%" }} />
       </Notification>
+      <StyledAngleDown onClick={() => dispatch(toggle())}>
+        {isOpen ? <FaTimes /> : <FaStream />}
+      </StyledAngleDown>
     </TopDiv>
   );
 };
