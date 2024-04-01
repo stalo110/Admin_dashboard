@@ -1,8 +1,4 @@
 import "./App.css";
-
-import Search1 from "./assets/search icon.svg";
-import Notification1 from "./assets/Notification.svg";
-import Arror from "./assets/arror.svg";
 import Girl from "./assets/girl1.svg";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import Cart1 from "./assets/cart.svg";
@@ -13,48 +9,33 @@ import Calender from "./assets/calender.svg";
 import Human from "./assets/human.svg";
 import BigGraph from "./assets/graph card.svg";
 import Atm from "./assets/atm.jpg";
+import SideNav from "./components/SideNav.tsx";
+import {
+  ParentDiv,
+  Main,
+  Table,
+  Statistics,
+  Cart,
+  Sub1,
+  Sub2,
+  Sub22,
+  LastDiv,
+  GraphImg,
+  CardImg,
+  Img,
+  Img1,
+  TableSection
+} from "./styles/styles.ts";
+import Nav from "./components/Nav.tsx";
 
-import {ParentDiv, Main, TopDiv, Overview, Search, Notification, Table, Statistics, Cart, Sub1, Sub2, Sub22, LastDiv} from "./styles/styles.ts"; 
 function App() {
   return (
     <>
       <ParentDiv>
+        <SideNav />
+
         <Main>
-          <TopDiv>
-            <Overview>
-              <h1
-                style={{ color: "black", fontSize: "32px", fontWeight: "700" }}
-              >
-                Overview
-              </h1>
-            </Overview>
-            <Search>
-              <p
-                style={{
-                  color: "#5041BC",
-                  fontSize: "14px",
-                  fontWeight: "500",
-                }}
-              >
-                Search
-              </p>
-              <img src={Search1} alt="" style={{ width: "5%" }} />
-            </Search>
-            <Notification>
-              <img src={Notification1} alt="" style={{ width: "5%" }} />
-              <img src={Girl} alt="" style={{ width: "20%" }} />
-              <p
-                style={{
-                  color: "#5041BC",
-                  fontSize: "14px",
-                  fontWeight: "400",
-                }}
-              >
-                Danielle Campbell{" "}
-              </p>
-              <img src={Arror} alt="" style={{ width: "5%" }} />
-            </Notification>
-          </TopDiv>
+          <Nav />
           <div>
             <p
               style={{ color: "black", fontWeight: "700", paddingLeft: "20px" }}
@@ -62,6 +43,7 @@ function App() {
               Top Sales Representative
             </p>
           </div>
+          <TableSection>
           <Table>
             <div style={{ marginTop: "20px" }}>
               <img src={Girl} alt="" />
@@ -107,6 +89,8 @@ function App() {
 
             <HiOutlineDotsVertical color="black" />
           </Table>
+          </TableSection>
+
           <Statistics>
             <Cart>
               <Sub1>
@@ -278,12 +262,12 @@ function App() {
             </Cart>
           </Statistics>
           <LastDiv>
-            <div>
-              <img src={BigGraph} alt="" />
-            </div>
-            <div>
-              <img src={Atm} alt="" style={{width: "90%", marginLeft: "20px", marginTop: "15px"}} />
-            </div>
+            <GraphImg>
+              <Img src={BigGraph} alt="" />
+            </GraphImg>
+            <CardImg>
+              <Img1 src={Atm} alt="" />
+            </CardImg>
           </LastDiv>
         </Main>
       </ParentDiv>
@@ -292,4 +276,3 @@ function App() {
 }
 
 export default App;
-

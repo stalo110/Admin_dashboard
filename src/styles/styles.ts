@@ -1,89 +1,29 @@
 import styled from "styled-components";
 
-
 export const ParentDiv = styled.div`
   display: flex;
-  width: 1443px;
-  height: 956px;
-  top: 121px;
-  left: 82px;
-  gap: 0px;
-`;
+  max-width: 100%;
+  height: fit-content;
+  overflow: hidden;
 
-export const SideNav1 = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 523px;
-  height: 956px;
-  gap: 0px;
-  border-radius: 40px 0px 0px 40px;
-  background: #5041bc;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 export const Main = styled.div`
-  width: 1200px;
-  height: 956px;
+  width: 85%;
+  height: fit-content;
   margin-left: -15%;
-  gap: 0px;
-  border-radius: 40px 40px 40px 40px;
+  border-radius: 40px;
   background: #ffffff;
-`;
-export const ImgDiv = styled.div`
-  display: flex;
-  margin-left: 15%;
-  margin-top: 40px;
-`;
-export const Border = styled.div`
-  border: 1px solid lightgray;
-  margin-top: 50px;
-  width: 45%;
-  margin-left: 5%;
-`;
+  overflow: hidden;
 
-export const NavDiv = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: 5%;
-  background: #ffffff;
-  width: 35%;
-  margin-top: 50px;
-  padding-left: 30px;
-  padding-right: 30px;
-  height: 40px;
-  gap: 0px;
-  border-radius: 10px 10px 10px 10px;
-  border: 0.56px 0px 0px 0px;
-`;
-export const NavDiv1 = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: 5%;
-  width: 35%;
-  margin-top: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  height: 40px;
-  gap: 0px;
-  border-radius: 10px 10px 10px 10px;
-  border: 0.56px 0px 0px 0px;
-`;
-
-export const Upgrade = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 180px;
-  height: 236px;
-  gap: 0px;
-  border-radius: 20px 20px 20px 20px;
-  background: #ffffff;
-  margin-left: 10%;
-  margin-top: 50px;
-`;
-
-export const TopDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
+  @media (max-width: 768px) {
+    width: 95%;
+    padding-left: 1%;
+    margin-left: 0%;
+    height: fit-content;
+  }
 `;
 
 export const Overview = styled.div`
@@ -91,49 +31,53 @@ export const Overview = styled.div`
   width: 35%;
   padding: 10px;
   padding-left: 20px;
-`;
-export const Search = styled.div`
-  display: flex;
-  width: 35%;
-  background-color: #f5f3ff;
-  border-radius: 20px;
-  height: 40px;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 20px;
+  overflow: hidden;
 `;
 
-export const Notification = styled.div`
-  display: flex;
-  width: 30%;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-left: 20px;
-  padding-right: 5px;
-`;
+
+
+export const TableSection = styled.div`
+overflow-x: auto;
+max-width: 100%;
+`
 
 export const Table = styled.div`
   display: flex;
-  width: 90%;
+  width: 1020px;
   height: 60px;
   margin-left: 2.5%;
-  gap: 0px;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 20px;
   border: 1px solid #ebe8ff;
   justify-content: space-between;
+  border-collapse: collapse;
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+  justify-content: space-between;
+  border-collapse: collapse;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+
 `;
+
+
 
 export const Statistics = styled.div`
   display: flex;
   justify-content: space-evenly;
-  width: 1130px;
-  height: 130px;
+  width: 98%;
+  height: fit-content;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
 `;
 export const Cart = styled.div`
   display: flex;
@@ -144,6 +88,11 @@ export const Cart = styled.div`
   height: fit-content;
   border-radius: 20px;
   border: 1px solid lightgrey;
+
+  @media (max-width: 768px) {
+    width: 30%;
+    margin-bottom: 20px;
+  }
 `;
 export const Sub1 = styled.div`
   display: flex;
@@ -168,8 +117,50 @@ export const Sub22 = styled.div`
 
 export const LastDiv = styled.div`
   display: flex;
-  width: 95%;
-  height: 300px;
+  width: 98%;
+  height: fit-content;
   margin-left: 2%;
   margin-top: 90px;
+  margin-bottom: 50px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+  }
+`;
+
+export const GraphImg = styled.div`
+  width: 100%;
+
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+`;
+
+export const CardImg = styled.div`
+  @media (max-width: 768px) {
+    width: 40%;
+  }
+`;
+
+export const Img = styled.img`
+  width: 100%;
+  margin-left: 20px;
+  margin-top: 15px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export const Img1 = styled.img`
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 15px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
